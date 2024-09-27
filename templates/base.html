@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% include 'components/_styles.html' %}
+
+        <title>Hilo - Organic Food Shop HTML Template</title>
+    </head>
+    <body>
+        <!-- Pre Loader -->
+        {% include 'components/_loader.html' %}
+
+        <!-- End Pre Loader -->
+
+        <!-- Top Header Start -->
+        {% include 'components/_header.html' %}
+
+        <!-- Top Header End -->
+
+        <!-- Start Navbar Area -->
+        {% include 'components/_navbar.html' %}
+
+        <!-- End Navbar Area -->
+
+        <!-- Banner Area -->
+        {% if request.path == '/' %}
+        {% include 'components/_banner.html' %}
+        {% else %}
+        {% include 'components/_inner_banner.html' %}
+        {% endif %}
+        <!-- Banner Area End -->
+        {% block content %}
+
+        {% endblock content %}
+
+        <!-- Footer Area -->
+        {% include 'components/_footer.html' %}
+
+        <!-- Footer Area End -->
+
+        {% include 'components/_scripts.html' %}
+
+    </body>
+</html>
